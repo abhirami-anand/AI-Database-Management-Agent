@@ -34,6 +34,7 @@ CLEANUP RULES
 PROJECT STRUCTURE
 
 ├── main.py        # Entry point — sets up the DB, runs the agent, prints before/after
+
 ├── agent.py        # DatabaseAgent class: reads data, calls Gemini, parses & applies fixes
 
 ├── db_setup.py     # Creates the SQLite table and seeds it with broken sample data
