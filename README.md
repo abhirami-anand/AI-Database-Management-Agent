@@ -5,22 +5,20 @@ A Python agent that connects to a SQLite database, detects broken or missing dat
 WHAT IT DOES
 
 The project seeds a users table with intentionally messy data — missing names, invalid emails, negative ages, null fields — then:
-
-Reads the current (broken) data from the database
-
-Sends it to Gemini with a set of cleanup rules
-
-Parses the AI's JSON response
-
-Applies the corrected values back to the database with a single UPDATE per row
+- Reads the current (broken) data from the database
+- Sends it to Gemini with a set of cleanup rules
+- Parses the AI's JSON response
+- Applies the corrected values back to the database with a single UPDATE per row
 
 EXAMPLE
+
 Before:
 (1, 'Alice', 25, 'alice@email.com')
 (2, 'Bob', None, 'bobemail.com')
 (3, None, 30, 'charlie@email.com')
 (4, 'David', -5, 'david@email.com')
 (5, 'Eve', 22, None)
+
 After:
 (1, 'Alice', 25, 'alice@email.com')
 (2, 'Bob', 0, 'bob@email.com')
@@ -46,6 +44,7 @@ PROJECT STRUCTURE
 
 └── .env            # Holds your GEMINI_API_KEY (not committed)
 
+
 SETUP
 
 1. Clone the repo
@@ -58,11 +57,13 @@ cd AI-Database-Management-Agent
 4. Run it
  python main.py
 
+
 REQUIREMENTS
 
 1. Python 3.10+
 2. A Gemini API key
    
+
 NOTES
 
 1. The database (database.db) is recreated from scratch every run via db_setup.py, so it's safe to re-run repeatedly while testing.
