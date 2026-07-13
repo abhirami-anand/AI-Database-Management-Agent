@@ -13,6 +13,7 @@ The project seeds a users table with intentionally messy data — missing names,
 EXAMPLE
 
 Before:
+
 (1, 'Alice', 25, 'alice@email.com')
 (2, 'Bob', None, 'bobemail.com')
 (3, None, 30, 'charlie@email.com')
@@ -20,6 +21,7 @@ Before:
 (5, 'Eve', 22, None)
 
 After:
+
 (1, 'Alice', 25, 'alice@email.com')
 (2, 'Bob', 0, 'bob@email.com')
 (3, 'Charlie', 30, 'charlie@email.com')
