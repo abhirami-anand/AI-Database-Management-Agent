@@ -68,8 +68,8 @@ REQUIREMENTS
 
 NOTES
 
-1. The database (database.db) is recreated from scratch every run via db_setup.py, so it's safe to re-run repeatedly while testing.
-2. .env and database.db are excluded from version control via .gitignore — never commit your API key.
+- The database (database.db) is recreated from scratch every run via db_setup.py, so it's safe to re-run repeatedly while testing.
+- .env and database.db are excluded from version control via .gitignore — never commit your API key.
 
 
 Author: Abhirami Anand
