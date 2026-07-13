@@ -5,10 +5,15 @@ A Python agent that connects to a SQLite database, detects broken or missing dat
 WHAT IT DOES
 
 The project seeds a users table with intentionally messy data — missing names, invalid emails, negative ages, null fields — then:
+
 Reads the current (broken) data from the database
+
 Sends it to Gemini with a set of cleanup rules
+
 Parses the AI's JSON response
+
 Applies the corrected values back to the database with a single UPDATE per row
+
 EXAMPLE
 Before:
 (1, 'Alice', 25, 'alice@email.com')
